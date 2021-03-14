@@ -32,8 +32,9 @@ Currently bot supports 5 commands
 ## Demo run
 
 <p align="center">
-<img src="assets/new-bot.gif" width="40%">
+<img src="assets/new-bot.gif" width="60%">
 </p>
+
 ---
 
 ## Contributions
