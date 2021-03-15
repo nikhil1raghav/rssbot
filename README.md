@@ -70,11 +70,12 @@ python rssbot.py
 - NOTE : If you're on ubuntu you may have to write ```pip3``` instead of ```pip``` and ```python3``` instead of ```python```.
 
 
+
 ## Todo
 
 There are some features that you can work on, list is not at all comprehensive.
 
-- [ ] Deleting feeds
+- [ ] Deleting feeds with `/delete`
 - [ ] Keeping messages per user from blowing up
 - [ ] An option to set custom update interval for every feed
 - [ ] Encrypting feed urls stored on server for privacy
