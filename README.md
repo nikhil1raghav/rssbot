@@ -20,13 +20,16 @@ Bot is built using [pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBot
 
 Currently bot supports 5 commands
 
--```/start``` and ```/help``` : Prints out all available commands and what they do.
+- ```/start``` and ```/help``` : Prints out all available commands and what they do.
 
 - ```/add``` : Gets a url from the user and finds if there is any rss/atom feed in that url. Distinction here is that bot doesn't ask for a feed directly, it finds the feed for you. You can just drop the youtube channel link, homepage of subreddit or a blog, if there is a valid rss/atom feed it'll be added to the file ```chat_id_feed```. It also checks if the feed is already stored to mitigate duplicacy.
 
 - ```/show``` : Prints out a list of all the feeds added so far by the user. You can use this option to implement a  __```/delete```__  feature, so that user knows what all is there and can be deleted.
 
 - ```/update``` : Checks for new updates in all the feeds added by a user and returns atmost 4 newest results per feed. Also notifies if there is no new update.
+- ```/delete``` : Used with ```/show``` to delete a feed set by user from the records.
+
+- Autoupdate is set to a custom interval of 1 hour
 
 ---
 ## Demo run
@@ -56,6 +59,8 @@ git clone https://github.com/nikhil1raghav/rssbot.git
 	- feedparser
 	- feedfinder2
 	- pyTelegramBotAPI
+	- sqlite3
+
 - Install them manually by using package manager for your distribution, or if you have ```pip```, you can use
 ```
 pip install -r requirements
@@ -75,7 +80,9 @@ python rssbot.py
 
 There are some features that you can work on, list is not at all comprehensive.
 
-- [ ] Deleting feeds with `/delete`
+- [x] Deleting feeds with `/delete`
+- [x] managing everything in a database
+- [x] Autoupdate feeds at a custom interval
 - [ ] Keeping messages per user from blowing up
 - [ ] An option to set custom update interval for every feed
 - [ ] Encrypting feed urls stored on server for privacy
